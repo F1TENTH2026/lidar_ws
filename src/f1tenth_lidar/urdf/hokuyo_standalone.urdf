@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot name="hokuyo_ust10">
+
+  <material name="dark_grey">
+    <color rgba="0.25 0.25 0.25 1.0"/>
+  </material>
+
+  <link name="world"/>
+
+  <joint name="world_to_laser_mount" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="laser_mount"/>
+  </joint>
+
+  <link name="laser_mount">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://f1tenth_lidar/meshes/hokuyo_ust10.stl"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.05 0.05 0.07"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="laser_mount_to_laser" type="fixed">
+    <origin xyz="0 0 0.0474" rpy="0 0 0"/>
+    <parent link="laser_mount"/>
+    <child link="laser"/>
+  </joint>
+
+  <link name="laser"/>
+
+</robot>

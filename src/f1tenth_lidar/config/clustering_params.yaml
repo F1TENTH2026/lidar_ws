@@ -1,0 +1,17 @@
+/**:
+  ros__parameters:
+    scan_topic: "/scan"
+    clusters_marker_topic: "/lidar_clusters"
+    frame_id: "laser"
+
+    min_range: 0.05
+    max_range: 10.0
+
+    cluster_tolerance: 0.15
+    min_cluster_size: 3
+    max_cluster_size: 500
+
+    marker_lifetime: 0.2
+    show_bbox: true
+    show_centroid: true
+    show_id_text: true
