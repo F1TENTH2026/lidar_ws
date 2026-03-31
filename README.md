@@ -8,12 +8,12 @@ Hokuyo UST-10LX LiDAR 드라이버 + DBSCAN 클러스터링 + RViz2 시각화
 
 ```bash
 # 네트워크 설정 (USB-Ethernet 어댑터 → LiDAR)
+# 자신의 워크스페이스로 이동 필수 
 chmod +x hokuyo_setup.sh
 ./hokuyo_setup.sh
 
 # 의존성 빌드
-cd ~/f1tenth_education/lidar_ws
-colcon build --packages-select f1tenth_lidar
+colcon build --symlink-install
 ```
 
 ---
